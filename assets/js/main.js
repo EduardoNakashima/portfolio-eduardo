@@ -487,7 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeader();
   initReveal();
   initSpotlight();
-  initCursor();
+  // initCursor();   // bolinha atrás do cursor desativada
   initMagnetic();
   initTilt();
   initPreviews();
