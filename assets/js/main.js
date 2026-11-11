@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Nakashima · Portfólio — script único (home + páginas de serviço)
+   Edu Naka · Portfólio — script único (home + páginas de serviço)
    Sem dependências externas: tudo em JavaScript puro.
    ========================================================================== */
 
@@ -11,7 +11,7 @@ const CONFIG = {
   whatsapp: "5511946457048", // TODO: trocar pelo número real
 
   // Mensagem padrão que já vem escrita quando o visitante abre o WhatsApp
-  whatsappMsg: "Olá, Nakashima! Vim pelo seu site e gostaria de conversar sobre um projeto.",
+  whatsappMsg: "Olá, Edu Naka! Vim pelo seu site e gostaria de conversar sobre um projeto.",
 
   // Chave gratuita do Web3Forms (https://web3forms.com): informe seu e-mail lá,
   // receba a chave e cole aqui. As mensagens do formulário chegam nesse e-mail.
@@ -444,7 +444,7 @@ function initForm() {
       const data = Object.fromEntries(new FormData(form));
       data.access_key = CONFIG.web3formsKey;
       data.subject = `Novo contato pelo site: ${data.nome}`;
-      data.from_name = "Site do Nakashima";
+      data.from_name = "Site do Edu Naka";
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },

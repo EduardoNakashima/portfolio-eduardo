@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Nakashima · Portfólio — folha de estilos única (home + páginas de serviço)
+   Edu Naka · Portfólio — folha de estilos única (home + páginas de serviço)
    Índice:
    1. Tokens   2. Base   3. Utilitários   4. Botões   5. Header
    6. Hero     7. Sobre  8. Serviços      9. Skills   10. Portfólio
@@ -626,3 +626,13 @@ a:hover .link-more svg, .link-more:hover svg { transform: translateX(5px); }
   .wa-float span { display: inline !important; }
 }
 .nl-badge, [class*="nl-badge"], [id*="nl-badge"], netlify-badge { display: none !important; visibility: hidden !important; }
+
+/* Conquista no mobile: aparece no topo, como notificação */
+@media (max-width: 560px) {
+  .toast {
+    top: max(12px, env(safe-area-inset-top)); bottom: auto; left: 12px; right: 12px;
+    max-width: none; z-index: 2147483647;
+    transform: translateY(-120%);
+  }
+  .toast.is-on { transform: none; }
+}
