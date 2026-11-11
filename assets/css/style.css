@@ -517,7 +517,7 @@ a:hover .link-more svg, .link-more:hover svg { transform: translateX(5px); }
 
 /* 15. WHATSAPP FLUTUANTE --------------------------------------------------- */
 .wa-float {
-  position: fixed; right: 20px; bottom: 20px; z-index: 55;
+  position: fixed; right: 20px; bottom: 20px; z-index: 2147483647;
   display: inline-flex; align-items: center; gap: 10px;
   height: 58px; padding: 0 22px 0 18px; border-radius: 999px;
   background: var(--accent-strong); color: #fff; font-weight: 600;

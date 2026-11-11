@@ -8,7 +8,7 @@
    -------------------------------------------------------------------------- */
 const CONFIG = {
   // Número do WhatsApp com DDI + DDD, só dígitos. Ex.: 5511912345678
-  whatsapp: "5500000000000", // TODO: trocar pelo número real
+  whatsapp: "5511946457048", // TODO: trocar pelo número real
 
   // Mensagem padrão que já vem escrita quando o visitante abre o WhatsApp
   whatsappMsg: "Olá, Nakashima! Vim pelo seu site e gostaria de conversar sobre um projeto.",
