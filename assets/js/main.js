@@ -497,3 +497,21 @@ document.addEventListener("DOMContentLoaded", () => {
   initAchievement();
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 });
+
+/* Esconde selos fixos de terceiros (ex.: Netlify) no canto inferior direito */
+(function hideBadges() {
+  const run = () => {
+    document.querySelectorAll("body > *:not(script):not(style)").forEach((el) => {
+      if (el.classList.contains("wa-float") || el.closest(".wa-float")) return;
+      const s = getComputedStyle(el);
+      if (s.position !== "fixed") return;
+      const r = el.getBoundingClientRect();
+      const nearCorner = r.bottom > innerHeight - 120 && r.right > innerWidth - 300 && r.width < 400 && r.height < 150;
+      const isBadge = /nl-badge|netlify/i.test(el.className + " " + el.id + " " + el.tagName);
+      if (isBadge || (nearCorner && !el.matches("[data-keep], .toast, .cursor"))) el.style.setProperty("display", "none", "important");
+    });
+  };
+  new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: false });
+  new MutationObserver(run).observe(document.body || document.documentElement, { childList: true });
+  window.addEventListener("load", () => { run(); setTimeout(run, 1500); setTimeout(run, 4000); });
+})();

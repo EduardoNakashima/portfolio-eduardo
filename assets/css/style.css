@@ -618,3 +618,11 @@ a:hover .link-more svg, .link-more:hover svg { transform: translateX(5px); }
 
 /* Selo oculto */
 .nl-badge { display: none !important; }
+
+/* Botão do WhatsApp cobre o selo do Netlify (desktop e mobile) */
+.wa-float { right: 12px !important; bottom: 12px !important; min-width: 200px; height: 64px; justify-content: center; }
+@media (max-width: 560px) {
+  .wa-float { width: auto !important; min-width: 200px; padding: 0 22px 0 18px !important; }
+  .wa-float span { display: inline !important; }
+}
+.nl-badge, [class*="nl-badge"], [id*="nl-badge"], netlify-badge { display: none !important; visibility: hidden !important; }
