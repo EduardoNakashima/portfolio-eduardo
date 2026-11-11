@@ -95,7 +95,7 @@ p { margin: 0; }
 }
 .cursor.is-visible { opacity: 1; }
 .cursor.is-hover { transform: translate(-50%, -50%) scale(1.8); background: rgba(167, 139, 250, 0.15); }
-@media (hover: hover) and (pointer: fine) { body.has-cursor { cursor: none; } body.has-cursor a, body.has-cursor button { cursor: none; } }
+.cursor { display: none; } /* cursor em anel desativado */
 
 /* Card de vidro */
 .glass {

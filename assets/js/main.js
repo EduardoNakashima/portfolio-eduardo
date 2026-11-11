@@ -476,7 +476,7 @@ const PORTFOLIO = [
     initHeader();
     initXp();
     initGlow();
-    initCursor();
+    // initCursor();   // cursor em anel desativado: usa o cursor padrão
     initReveal();
     initParallax();
     initMagnetic();
