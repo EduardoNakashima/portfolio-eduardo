@@ -15,7 +15,7 @@ const CONFIG = {
 
   // Chave gratuita do Web3Forms (https://web3forms.com): informe seu e-mail lá,
   // receba a chave e cole aqui. As mensagens do formulário chegam nesse e-mail.
-  web3formsKey: "SUA_CHAVE_WEB3FORMS", // TODO: colar a chave
+  web3formsKey: "2cadc14f-1f97-45f8-9245-d75b3846c006",
 
   // Prévia dos sites no portfólio: carrega o site ao vivo dentro do card quando
   // não existe um print em assets/img/portfolio/. Só no desktop, para não pesar no celular.
