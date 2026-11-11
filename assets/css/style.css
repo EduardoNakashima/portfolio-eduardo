@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Eduardo · Portfólio — folha de estilos única (home + páginas de serviço)
+   Nakashima · Portfólio — folha de estilos única (home + páginas de serviço)
    Índice:
    1. Tokens   2. Base   3. Utilitários   4. Botões   5. Header
    6. Hero     7. Sobre  8. Serviços      9. Skills   10. Portfólio
@@ -615,3 +615,6 @@ a:hover .link-more svg, .link-more:hover svg { transform: translateX(5px); }
   .js [data-reveal] { opacity: 1; transform: none; }
   .js .slot[data-reveal]:not(.is-in) .slot__bar i::after { transform: scaleX(1); }
 }
+
+/* Selo oculto */
+.nl-badge { display: none !important; }
