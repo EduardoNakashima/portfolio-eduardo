@@ -515,3 +515,26 @@ document.addEventListener("DOMContentLoaded", () => {
   new MutationObserver(run).observe(document.body || document.documentElement, { childList: true });
   window.addEventListener("load", () => { run(); setTimeout(run, 1500); setTimeout(run, 4000); });
 })();
+
+/* Mobile: botão "Rolar site" em cada card do portfólio */
+document.addEventListener("DOMContentLoaded", () => {
+  if (!matchMedia("(hover: none)").matches) return;
+  document.querySelectorAll(".project").forEach((card) => {
+    const inner = card.querySelector(".project__inner");
+    const thumb = card.querySelector(".project__thumb");
+    if (!inner || !thumb) return;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "project__scroll";
+    btn.setAttribute("aria-label", "Rolar a prévia do site");
+    btn.innerHTML = '<span>Rolar site</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>';
+    const place = () => { btn.style.top = (thumb.offsetHeight - btn.offsetHeight - 12) + "px"; };
+    btn.addEventListener("click", () => {
+      const on = card.classList.toggle("is-panning");
+      btn.querySelector("span").textContent = on ? "Voltar ao topo" : "Rolar site";
+    });
+    inner.appendChild(btn);
+    place();
+    addEventListener("resize", place);
+  });
+});

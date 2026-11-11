@@ -636,3 +636,23 @@ a:hover .link-more svg, .link-more:hover svg { transform: translateX(5px); }
   }
   .toast.is-on { transform: none; }
 }
+
+/* Mobile: botão para rolar a prévia do site (no desktop isso acontece no hover) */
+.project__inner { position: relative; }
+.project__scroll { display: none; }
+@media (hover: none) {
+  .project__scroll {
+    position: absolute; right: 12px; z-index: 3;
+    top: calc((100% - 0px) * 0); /* ajustado pelo JS para ficar sobre a prévia */
+    display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px;
+    background: var(--accent-strong); color: #fff; font-size: 0.86rem; font-weight: 600;
+    box-shadow: 0 10px 25px -8px rgba(124, 58, 237, 0.8);
+    animation: scroll-hint 2s ease-in-out infinite;
+  }
+  .project__scroll svg { width: 14px; height: 14px; transition: transform 0.3s; }
+  .project.is-panning .project__scroll { animation: none; }
+  .project.is-panning .project__scroll svg { transform: rotate(180deg); }
+  .project.is-panning .has-preview img { transform: translateY(calc(var(--pan, 0px) * -1)); }
+  .project.is-panning .has-preview iframe { transform: translateY(calc(var(--pan, 0px) * -1)) scale(var(--s, 0.4)); }
+}
+@keyframes scroll-hint { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
