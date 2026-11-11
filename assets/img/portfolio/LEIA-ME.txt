@@ -1,0 +1,7 @@
+Coloque aqui os prints dos sites (largura 1000px, formato WebP, pagina inteira), com estes nomes:
+petshop-palmira.webp
+visani.webp
+tec-rental.webp
+empretec.webp
+haskell.webp
+nereg.webp
