@@ -530,8 +530,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.innerHTML = '<span>Rolar site</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>';
     const place = () => { btn.style.top = (thumb.offsetHeight - btn.offsetHeight - 12) + "px"; };
     btn.addEventListener("click", () => {
-      const on = card.classList.toggle("is-panning");
-      btn.querySelector("span").textContent = on ? "Voltar ao topo" : "Rolar site";
+      card.classList.add("is-panning");
+      btn.remove();
     });
     inner.appendChild(btn);
     place();
